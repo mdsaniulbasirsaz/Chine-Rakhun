@@ -2,10 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const path = require('path');
-const multer = require('multer');
 const bodyParser = require('body-parser');
 const port = 3000;
-const PORT = process.env.PORT || 3000;
 const { Agent } = require('http');
 app.use(bodyParser.json({ limit: '10mb' }));
 
