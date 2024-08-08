@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 const port = 3000;
 const { Agent } = require('http');
 app.use(bodyParser.json({ limit: '10mb' }));
-
+require('dotenv').config();
+const uri = process.env.MONGODB_URI;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
