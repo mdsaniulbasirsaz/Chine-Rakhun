@@ -6,15 +6,15 @@ const bodyParser = require('body-parser');
 const port = 3000;
 const { Agent } = require('http');
 app.use(bodyParser.json({ limit: '10mb' }));
-require('dotenv').config();
-const uri = process.env.MONGODB_URI;
+// require('dotenv').config();
+// const uri = process.env.MONGODB_URI;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
 
-const mongoURI = 'mongodb+srv://saniulsaz:12345@roktodin.abnxvco.mongodb.net/Chine-Rakhun?retryWrites=true&w=majority'; // Use your MongoDB URI here
+const mongoURI = 'mongodb+srv://saniulsaz:12345@roktodin.abnxvco.mongodb.net/Chine-Rakhun'; 
 mongoose.connect(mongoURI, {
 })
 .then(() => console.log('MongoDB connected'))
