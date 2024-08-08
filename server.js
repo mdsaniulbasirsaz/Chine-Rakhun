@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 
 
-const mongoURI = 'mongodb+srv://saniulsaz:12345@roktodin.abnxvco.mongodb.net/Chine-Rakhun'; // Use your MongoDB URI here
+const mongoURI = 'mongodb+srv://saniulsaz:12345@roktodin.abnxvco.mongodb.net/Chine-Rakhun?retryWrites=true&w=majority'; // Use your MongoDB URI here
 mongoose.connect(mongoURI, {
 })
 .then(() => console.log('MongoDB connected'))
